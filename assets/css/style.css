@@ -239,7 +239,9 @@ i.fab:nth-child(2) {
 }
  /*------------------panier--------------------------*/
  
- 
+ .titre__panier{
+     color:black;
+ }
 
 
 
