@@ -3,7 +3,7 @@
     <head>
         <title>L'Ours </title>
         <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial scale=1.0">
+        <meta name="view__clickport" content="width=device-width, initial scale=1.0">
         <script src="https://kit.fontawesome.com/f811b3604b.js" crossorigin="anonymous"></script>
         <script src="main.js"></script>
         <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -12,10 +12,11 @@
         <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet"> 
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC&family=Noto+Sans+TC:wght@100;300;400;500;700;900&family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap" rel="stylesheet"> 
-        <link rel="stylesheet" href="./assets/css/style.css">
+        <link rel="stylesheet" href="../assets/css/style.css">
     </head>
     <body>
         <header>
+            <div class="overlay"></div>
             <a href="index.html">
                 <h1 class="logo.ours">Orinours</h1>
             </a>
@@ -41,102 +42,101 @@
                     </li>
                 <li class="cart">
                     <i class="fas fa-shopping-cart"></i>
-                    <a href="panier.html"><p>Panier</p></a>
+                    <a href="pages/basket.html"><p>Panier</p></a>
                 </li>
             </nav>
         </header>
         <main>
-            <div class="banner_bloc">
-                <img class="banner" src="images/tp6Sri.jpg" alt="Teddy Banner">
-                <div class="title">
-                    <h2>L'Ourson Véritable<br>Fait main </h2>
-                    
-                </div>
-            </div>  
             <section class="cards__container">
                 <div class="cards">
                     <div class="single__card">
-                        <img src="images/teddy_1.jpg" alt="Norbert Teddy">
-                        <div class="pdt__info">
-                            <h2>Norbert</h2>
-                            <p class="price">45€</p>
-                        </div>
-                        <div class="choose__btn">
-                            <div class="pick">
-                                <a href="produit.html"><i class="fas fa-eye"></i></a>
+                        <img src="assets/images/teddy_1.jpg" alt="Norbert Teddy">
+                        <div class="card__description">
+                            <div class="card__info">
+                                <h2>Norbert</h2>
+                                <p class="price">45€</p>
                             </div>
-                            <div class="add">
-                                <a href="panier.html"><i class="fas fa-cart-plus"></i></a>
-                            </div>  
+                            <div class="choose">
+                                <div class="view__click">
+                                    <a href="pages/product.html"><i class="fas fa-eye"></i></a>
+                                </div>
+                                <div class="add__click">
+                                    <a href="pages/basket.html"><i class="fas fa-cart-plus"></i></a>
+                                </div>  
+                            </div>
                         </div>
                     </div>
                     <div class="single__card">
-                        <img src="images/teddy_2.jpg" alt="Arnold Teddy">
-                        <div class="pdt__info">
-                            <h2>Arnold</h2>
-                            <p class="price">45€</p>
-                        </div>
-                        <div class="choose__btn">
-                            <div class="pick">
-                                <a href="produit.html"><i class="fas fa-eye"></i></a>
+                        <img src="assets/images/teddy_2.jpg" alt="Arnold Teddy">
+                        <div class="card__description">
+                            <div class="card__info">
+                                <h2>Arnold</h2>
+                                <p class="price">45€</p>
                             </div>
-                            <div class="add">
-                                <a href="panier.html"><i class="fas fa-cart-plus"></i></a>
-                            </div>  
+                            <div class="choose">
+                                <div class="view__click">
+                                    <a href="pages/product.html"><i class="fas fa-eye"></i></a>
+                                </div>
+                                <div class="add__click">
+                                    <a href="pages/pages/basket.html"><i class="fas fa-cart-plus"></i></a>
+                                </div>  
+                            </div>
+                        </div>
+                    </div>    
+                    <div class="single__card">
+                        <img src="assets/images/teddy_3.jpg" alt="Lenny & Carl Teddy">
+                        <div class="card__description">
+                            <div class="card__info">
+                                <h2>Lenny & Carl</h2>
+                                <p class="price">45€</p> 
+                            </div>
+                            <div class="choose">
+                                <div class="view__click">
+                                    <a href="pages/product.html"><i class="fas fa-eye"></i></a>
+                                </div>
+                                <div class="add__click">
+                                    <a href="pages/basket.html"><i class="fas fa-cart-plus"></i></a>
+                                </div>  
+                            </div>
                         </div>
                     </div>
                     <div class="single__card">
-                        <img src="images/teddy_3.jpg" alt="Lenny & Carl Teddy">
-                        <div class="pdt__info">
-                            <h2>Lenny & Carl</h2>
-                            <p class="price">45€</p> 
-                        </div>
-                        <div class="choose__btn">
-                            <div class="pick">
-                                <a href="produit.html"><i class="fas fa-eye"></i></a>
+                        <img src="assets/images/teddy_4.jpg" alt="Gustav Teddy">
+                        <div class="card__description">
+                            <div class="card__info">
+                                <h2>Gustav</h2>
+                                <p class="price">45€</p>
+                            </div> 
+                            <div class="choose">
+                                <div class="view__click">
+                                    <a href="pages/product.html"><i class="fas fa-eye"></i></a>
+                                </div>
+                                <div class="add__click">
+                                    <a href="pages/basket.html"><i class="fas fa-cart-plus"></i></a>
+                                </div>  
                             </div>
-                            <div class="add">
-                                <a href="panier.html"><i class="fas fa-cart-plus"></i></a>
-                            </div>  
-                        </div>
-                    </div>
-                    
-                    <div class="single__card">
-                        <img src="images/teddy_4.jpg" alt="Gustav Teddy">
-                        <div class="pdt__info">
-                            <h2>Gustav</h2>
-                            <p class="price">45€</p>
-                        </div> 
-                        <div class="choose__btn">
-                            <div class="pick">
-                                <a href="produit.html"><i class="fas fa-eye"></i></a>
-                            </div>
-                            <div class="add">
-                                <a href="panier.html"><i class="fas fa-cart-plus"></i></a>
-                            </div>  
                         </div>
                     </div>
                     <div class="single__card">
-                        <img src="images/teddy_5.jpg" alt="Garfunkel Teddy">
-                        <div class="pdt__info">
-                            <h2>Garfunkel</h2>
-                            <p class="price">45€</p>
-                        </div>
-                        <div class="choose__btn">
-                            <div class="pick">
-                                <a href="produit.html"><i class="fas fa-eye"></i></a>
+                        <img src="assets/images/teddy_5.jpg" alt="Garfunkel Teddy">
+                        <div class="card__description">
+                            <div class="card__info">
+                                <h2>Garfunkel</h2>
+                                <p class="price">45€</p>
                             </div>
-                            <div class="add">
-                                <a href="panier.html"><i class="fas fa-cart-plus"></i></a>
-                            </div>  
+                            <div class="choose">
+                                <div class="view__click">
+                                    <a href="pages/product.html"><i class="fas fa-eye"></i></a>
+                                </div>
+                                <div class="add__click">
+                                    <a href="pages/basket.html"><i class="fas fa-cart-plus"></i></a>
+                                </div>  
+                            </div>
                         </div>
                     </div>
                 </div>
             </section>
         </main>
-
-
-
         <footer>
             <ul>
                 <li>A propos</li>
@@ -149,10 +149,5 @@
                 <i class="fab fa-instagram-square"></i>
             </div>
          </footer>
-
-
-
-
-
-
-    </body>
+     </body>
+</html>
