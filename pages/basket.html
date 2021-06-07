@@ -4,6 +4,7 @@
         <title>Panier </title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial scale=1.0">
+       
         <script src="https://kit.fontawesome.com/f811b3604b.js" crossorigin="anonymous"></script>
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
@@ -14,116 +15,146 @@
         <link rel="stylesheet" href="../assets/css/style.css">
     </head>
     <body>
-        <header>
-        <a href="../index.html">
-            <h1 class="logo">Orinours</h1>
+      <header>
+        <a href="/index.html">
+            <div class="logo">
+                Orinours
+            </div>
         </a>
         <div class="searchbar">
             <div class="conteneur__form">
-            <form>
-                <div class="champsaisie">
-                    <button>
-                        <a href="#">
-                            <i class="fas fa-search"></i>
-                        </a>
-                    </button>
-                    <input id="search" type="text" placeholder="Recherche">
-                </div>
-            </form>
+                <form>
+                    <div class="champsaisie">
+                        <button>
+                            <a href="#">
+                                 <i class="fas fa-search"></i>
+                            </a>
+                        </button>
+                        <input id="search" type="text" placeholder="Recherche">
+                    </div>
+                </form>
             </div>
         </div>
         <nav>
             <ul>
                 <li class="User">
-                    <i class="fas fa-user-circle"></i> 
-                    <a href="../index.html"><p>Mon Compte</p></a> 
+                    <a href="index.html">
+                        <i class="fas fa-user-circle"></i> 
+                    </a> 
                 </li>
             <li class="cart">
-                <i class="fas fa-shopping-cart"></i>
-                <a href="panier.html"><p>Panier</p></a>
+                <a href="pages/basket.html">
+                    <div class="cart">
+                        <i class="fas fa-shopping-cart"></i>
+                        <p>Panier</p>
+                    </div>
+                </a>
             </li>
         </nav>
     </header>
-    <main>
-       
-    
-    <h1 class="titre__panier">Votre Panier</h1>
-    
-    <div class="panier">
-    
-      <div class="column-labels">
-        <label class="product-image">Image</label>
-        <label class="product-details">Product</label>
-        <label class="product-price">Price</label>
-        <label class="product-quantity">Quantity</label>
-        <label class="product-removal">Remove</label>
-        <label class="product-line-price">Total</label>
-      </div>
-    
-      <div class="product">
-        <div class="product-image">
-          <img src="images/teddy_1.jpg">
-        </div>
-        <div class="product-details">
-          <div class="product-title">Arnold</div>
-          <p class="product-description">Le plus beau des oursons</p>
-        </div>
-        <div class="product-price">49€</div>
-        <div class="product-quantity">
-          <input type="number" value="2" min="1">
-        </div>
-        <div class="product-removal">
-          <button class="remove-product">
-            Remove
-          </button>
-        </div>
-        <div class="product-line-price">49€</div>
-      </div>
-    
-      <div class="product">
-        <div class="product-image">
-          <img src="images/teddy_4.jpg">
-        </div>
-        <div class="product-details">
-          <div class="product-title">Garfunkel</div>
-          <p class="product-description">Tout doux tout mignon</p>
-        </div>
-        <div class="product-price">49€</div>
-        <div class="product-quantity">
-          <input type="number" value="1" min="1">
-        </div>
-        <div class="product-removal">
-          <button class="remove-product">
-            Supprimer
-          </button>
-        </div>
-        <div class="product-line-price">45.99</div>
-      </div>
-    
-      <div class="totals">
-        <div class="totals-item">
-          <label>Subtotal</label>
-          <div class="totals-value" id="cart-subtotal">98€</div>
-        </div>
-        
-        <div class="totals-item">
-          <label>Frais d' expedition</label>
-          <div class="totals-value" id="cart-shipping">5€</div>
-        </div>
-        <div class="totals-item totals-item-total">
-          <label> Panier Total</label>
-          <div class="totals-value" id="cart-total">103€</div>
-        </div>
-      </div>
-          
-          <button class="checkout">Commander</button>
-    
+        <main>
+            <section class="Shopping__cart">
+                <div class="cart__table">
+                    <table>
+                        <thead>
+                            <tr class="cart__items">
+                                <th>#</th>
+                                <th>Photo</th>
+                                <th>Produit</th>
+                                <th>Quantité</th>
+                                <th>prix</th>
+                                <th>Total</th>
+                                <th>Supprimer</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>
+                                    <a href="#">
+                                        <img src="/assets/images/teddy_2.jpg" alt="image ourson Arnold">
+                                    </a>
+                                </td>
+                                <td>
+                                    <h3>
+                                        <a href="#">
+                                            ARNOLD
+                                        </a>
+                                    </h3>
+                                </td>
+                                <td>
+                                    <form action="">
+                                        <input type="number" value="1" name="quantity">
+                                    </form>
+                                </td>
+                                <td>
+                                    <div class="item_price">
+                                        45€
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="subtotal">
+                                        45€
+                                    </div>
+                                  </td>
+                                <td>
+                                  <i class="fas fa-trash"></i>
+                </td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>
+                  <a href="#">
+                      <img src="/assets/images/teddy_5.jpg" alt="image ourson Garfunkel">
+                  </a>
+              </td>
+              <td>
+                <h3>
+                  <a href="#">
+                    <h3>
+                      GARFUNKEL
+                    </h3>
+                  </a>
+              </td>
+              <td>
+                <form action="">
+                  <input type="number" value="1" name="quantity">
+                </form>
+              </td>
+              <td>
+                <div class="item_price">
+                  45€
+                </div>
+              </td>
+              <td>
+                <div class="subtotal">
+                  45€
+                </div>
+              </td>
+              <td>
+                <i class="fas fa-trash"></i>
+              </td>
+            </tr>
+            <tr class="total">
+              <td>Total</td>
+              <td></td>
+              <td></td>
+              <td>2</td>
+              <td></td>
+              <td> 90€</td>
+              <td>
+                <a href="#">Ajouter a la liste de souhaits</a>
+              </td>
+            </tr>
+          </tbody>
+      </table>
     </div>
-    
-    
-  
+</section>
+</main>
 
-<footer>
+      
+
+<footer class="footer__cart">
     <ul>
         <li>A propos</li>
         <li>Nous contacter</li>
