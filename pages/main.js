@@ -22,6 +22,7 @@ fetch (teddies)
   
 })
 .catch(function(error){});
+
 //fonction de recuperation des Ours//
 
 function PushTeddies (teddies){
