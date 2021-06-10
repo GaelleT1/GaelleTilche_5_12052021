@@ -26,7 +26,7 @@ fetch (teddies)
 
 //fonction de recuperation des Ours//
 
-function PushTeddies (teddies){
+ function PushTeddies (teddies){
   console.log(teddies);
 
   //creation d'1 boucle a linterieur de Fetch pour chaque element//
@@ -51,8 +51,10 @@ function PushTeddies (teddies){
     let cardDescription = document.createElement('div');
     cardDescription.className = 'card__description';
 
+
     let tedName = document.createElement('h2');
     tedName.className = 'ted__name';
+    
 
     let tedPrice = document.createElement('p');
     tedPrice.className = 'ted__price';
@@ -70,16 +72,16 @@ function PushTeddies (teddies){
   cardDescription.append(tedName,tedPrice, viewBtn);
   cards.appendChild(singleCard);
   console.log(cards);
+
+  
   
 });
   
 }
 
 
-//Affichage des ours//
-PushTeddies
 
-
+  
 
   
       

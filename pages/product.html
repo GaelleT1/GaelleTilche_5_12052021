@@ -54,7 +54,7 @@
             </nav>
         </header>
         <main>
-            <section class="pdt__container">
+            <section id="pdt__container" class="pdt__container">
                 <div class="pdt__info">
                     <div class="thumbnail">
                         <img src="/assets/images/teddy_2.jpg">
@@ -70,7 +70,11 @@
                                 <li class="color">
                                     <form class="btn btn__select" id="options">
                                         <select name="color__option" id="select">
-                                            
+                                           <option value="colors">Couleur</option> 
+                                           <option value="color_0">couleur_0</option>
+                                           <option value="color_1">couleur_1</option>
+                                           <option value="color_2">couleur_2</option>
+                                           <option value="color_3">couleur_3</option>
                                         </select>
                                     </form>
                                 </li>
@@ -90,12 +94,12 @@
                                 </li>
                             </ul>
                         </div>
-                        <div class=" btn add__btn">
-                            <a href="pages/basket.html">
-                                AJOUTER
+                        <a href="pages/basket.html">
+                            <button class=" btn add__btn">
+                             Ajouter au Panier<br>
                                 <i class="fas fa-shopping-cart"></i>
-                            </a>
-                        </div> 
+                            </button>
+                        </a>
                     </div>
                 </div>
             </section>

@@ -15,16 +15,17 @@ fetch (url)
     console.log(value);
     (value);
 })
+.catch(function(error){});
 
 for (let i = 0; i < data.length; i++) {
   options = document.createElement('option');
   options.text = data[i].colorList;
   colorList.add(options);
-}    
-  .catch()(console.error()){};
-
-
-
+}  
+const pdtId = queryString_url_id;
+const position = document.querySelector('pdt__container');
+const urlSearchParams = new URLSearchParams(queryString_url_id);
+const id =urlSearchParams.get('_id')
 
 
 

@@ -390,20 +390,20 @@ footer ul{
 
 
        
-.add__btn a{
-    color: white;
-    font-weight: 400;     
-} 
 
-.add__btn{
-    height: 40px;
-    width: 120px;
+
+ .add__btn {
+    height: 50px;
+    width: 150px;
     background-color: var(--fushia);
     border-radius: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
     margin:auto;
+    color: white;
+    font-weight: 700; 
+    cursor: pointer;
 }
 
 .pdt__footer{
