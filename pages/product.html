@@ -4,7 +4,6 @@
         <title>Produit </title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial scale=1.0">
-        
         <script src="https://kit.fontawesome.com/f811b3604b.js" crossorigin="anonymous"></script>
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
@@ -56,31 +55,26 @@
         <main>
             <section id="pdt__container" class="pdt__container">
                 <div class="pdt__info">
-                    <div class="thumbnail">
-                        <img src="/assets/images/teddy_2.jpg">
-                    </div>
-                    <div class="pdt__description">
-                        <div class="infos">
-                            <h2>Arnold</h2>
-                            <p>
-                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolorum rerum corporis cum, minima quos iste harum dicta id fuga placeat culpa officiis sed nam eum maxime nesciunt odio, nostrum asperiores.
-                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloremque sapiente, quia nesciunt dignissimos accusantium animi impedit, ab atque quasi aperiam blanditiis! Quisquam consequuntur in iure, est ipsam eum totam ea?
-                            </p>
-                            <ul class="pdt__list">
-                                <li class="color">
-                                    <form class="btn btn__select" id="options">
-                                        <select name="color__option" id="select">
+                    <img class ="pdt__thumbnail" src="" alt="Teddy's Thumbnail">
+                    <h2 class = "ted__name">name</h2>
+                    <P class="ted__description">description</P>
+                    <p class="ted__price">price</p>
+                </div>
+                    <ul class="pdt__list">
+                        <li class="color">
+                            <form class="btn btn__select" id="options">
+                                <select name="color__option" id="select">
                                            <option value="colors">Couleur</option> 
                                            <option value="color_0">couleur_0</option>
                                            <option value="color_1">couleur_1</option>
                                            <option value="color_2">couleur_2</option>
                                            <option value="color_3">couleur_3</option>
-                                        </select>
-                                    </form>
-                                </li>
-                                <li class="quantity">
-                                    <div class="btn__nb">
-                                        <i class="fas fa-minus"></i>
+                                </select>
+                            </form>
+                        </li>
+                        <li class="quantity">
+                            <div class="btn__nb">
+                                <i class="fas fa-minus"></i>
                                     </div>
                                     <div class="pdt__number">
                                         <input type="text" value="1" name="product__nb">
@@ -89,11 +83,8 @@
                                         <i class="fas fa-plus"></i>
                                     </div>
                                 </li>
-                                <li class="price">
-                                    45€
-                                </li>
                             </ul>
-                        </div>
+                    
                         <a href="pages/basket.html">
                             <button class=" btn add__btn">
                              Ajouter au Panier<br>
