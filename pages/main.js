@@ -40,36 +40,40 @@ fetch (teddies)
     let cardsContainer = document.createElement('div');
     cardsContainer.className = "cards__container";
     
-    let singleCard = document.createElement('div');
-    singleCard.setAttribute('href', 'pages/product.html');
+    let singleCard = document.createElement('a');
+    singleCard.setAttribute('href', 'pages/product.html?id=' + Element._id );
     singleCard.className = 'single__card';
 
     let image = document.createElement('img');
     image.className = 'card__img';
     image.setAttribute('alt','Photo TeddyBear');
-
+    image.setAttribute ('src', Element.imageUrl)
+      
     let cardDescription = document.createElement('div');
     cardDescription.className = 'card__description';
 
 
     let tedName = document.createElement('h2');
     tedName.className = 'ted__name';
-    
+    tedName.innerText = Element.name;
+    console.log(tedName);
 
     let tedPrice = document.createElement('p');
     tedPrice.className = 'ted__price';
-
+    tedPrice.innerText = Element.price;
+   
     let viewBtn = document.createElement('a');
     viewBtn.className = 'view__btn';
     viewBtn.innerText = 'Voir';
-    viewBtn.setAttribute('href', 'pages/product.html');
+    viewBtn.setAttribute('href', 'pages/product.html?id=' + Element._id );
 
     
 //On rattache les nouveaux elements a leurs parents //
   
   cardsContainer.appendChild(singleCard);
-  singleCard.append(image,cardDescription);
   cardDescription.append(tedName,tedPrice, viewBtn);
+  singleCard.append(image,cardDescription);
+  
   cards.appendChild(singleCard);
   console.log(cards);
 
