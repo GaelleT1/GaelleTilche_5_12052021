@@ -72,13 +72,13 @@ fetch (teddies)
     viewBtn.setAttribute('href', 'pages/product.html?id=' + Element._id );
 
     
-//rattachement des nouveaux elements aux parents //
-  
+//rattachement des nouveaux elements aux parents // 
   cardsContainer.appendChild(singleCard);
   cardDescription.append(tedName,tedPrice, viewBtn);
   singleCard.append(image,cardDescription);
   cards.appendChild(singleCard);
   console.log(cards);
+
 });
   
 }
