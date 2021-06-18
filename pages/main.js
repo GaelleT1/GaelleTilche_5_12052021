@@ -28,7 +28,7 @@ fetch (teddies)
  function PushTeddies (teddies){
   console.log(teddies);
 
-  //boucler les ours a l interieur de fetch//
+  //boucler les ours a l'interieur de fetch//
 
     teddies.forEach((Element) => {
       let teddyList = ``;
