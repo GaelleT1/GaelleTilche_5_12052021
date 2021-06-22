@@ -5,7 +5,7 @@ let params = new URLSearchParams(pdtLocation.search);
 let id = params.get('id');
 const url2 = "http://localhost:3000/api/teddies/" + id;
 
-// Import des data de l'API avec nouvelle url contenant l'id//
+// -------Import des data de l'API avec nouvelle url contenant l'id--------//
 fetch (url2)
 .then(function(res) {
   if (res.ok) {
@@ -19,15 +19,15 @@ fetch (url2)
 
 .catch(function(error){});
 
-// Fonction de visualisation des Ours en fonction de leur id//
+//------------- Fonction de visualisation des Ours en fonction de leur id-------------//
 
 function viewTeddies(pdtLocation) {
 
-  //Recuperation des Elements dans le DOM//
+  //--------------------Recuperation des Elements dans le DOM--------//
     let products = document.getElementById("pdt__container");
     let tedInfos = document.getElementById("ted__infos"); 
 
-    // Ajout du contenu texte et source img, a l'interieur des elements//
+    // Ajout du contenu texte et source img, a l'interieur des elements html//
     let tedImg = document.getElementById('ted__pic');
     tedImg.setAttribute ('src', pdtLocation.imageUrl);
     
@@ -41,9 +41,9 @@ function viewTeddies(pdtLocation) {
     tedPrice.innerText = pdtLocation.price;
 
     // Rattachement de la Div contenant les infos au conteneur principal// 
-    products.appendChild(tedInfos); 
+    products.appendChild('ted__infos'); 
 
-     // Choix des options//
+     // ------------------------Choix des options couleur/ quantite------------------//
 
       let select = document.createElement('select');
       for (let i = 0; i < colors.length; i++) {
@@ -59,8 +59,43 @@ function viewTeddies(pdtLocation) {
       select.appendChild('options');
     
 }
-   
-}  
+
+   //-------------------------------CART------------------------------------//
+
+let cart = [];
+const addToCartBtn = document.getElementByClassName ('add__btn');
+
+//ajout d'articles dans local storage//
+for (let i=o; i<addToCartBtn.length; i++){
+addToCartBtn[i].addEventListener('click', function(){
+let items =[];
+})
+}
+if (typeof(storage) !== 'undefined'){
+    let item ={
+       //* id:i + 1, name price et description .textContent//
+    }
+    if(json.parse(localStorage.getItem('items')) === null){
+        items.push(item);
+    localStorage.setItem('items', JSON.stringify(item));
+    }else{
+        const localItems = json.parse(localStorage.getItem('items'))
+        localItems.map(data=>{
+            if(item.id === data.id){
+               item.nb = item.nb +1;
+            
+            }else{
+                items.push(data);
+            }
+        })
+        items.push(item);
+        localStorage.setItem('items',JSON.stringify(items));
+        }
+        alert('article ajouté');
+    }else{
+        alert(' local storage error');
+    }
+}
     
     
   

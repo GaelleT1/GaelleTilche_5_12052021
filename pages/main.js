@@ -35,13 +35,13 @@ fetch (teddies)
       const cards = document.getElementById('cards');
       console.log(Element);
 
-//creation d' elements HTML + ajout de classes et attributs//
+//creation d'elements HTML + ajout de classes et attributs//
 
     let cardsContainer = document.createElement('div');
     cardsContainer.className = "cards__container";
     
     let singleCard = document.createElement('a');
-    //new url pour recuperer les ours depuis l'id//
+    //new url  pour recuperer les ours depuis l'id (cartes avec liens actifs) //
     singleCard.setAttribute('href', 'pages/product.html?id=' + Element._id );
     singleCard.className = 'single__card';
 

@@ -187,41 +187,28 @@ h2{
    display:flex;
    flex-direction: column;
    justify-content:space-around;
-   height:100%;
-   border-radius: 20px;
-    border: 2px solid var(--mint);
+    border-radius: 20px;
+    box-shadow: var(--lightMint) 2px 3px 3px 4px;
     max-width: 280px;
     padding-bottom: 1rem;
     margin: 1rem;
 }
 
+
 .single__card img{
     width:100%;
     border-radius:20px 20px 0 0;
 }
-  
-.pdt__info{
-    text-align:center;
-    margin:auto;
+
+
+
+.view__btn{
+    box-shadow: lightgrey 3px 3px 3px 3px;
+    transition: 2s ease-in-out cubic-bezier(1,0,0,1);
 }
 
-.name{
-    font-size:1.5rem;
-    font-weight:bold;
-    font-family: Garamond;
-}
-
-.price{
-    font-weight: bold;
-    font-size: 1.5rem;
-    color: var(--darkBlue);
-      
-}
-
-.choose{
-    display: flex;
-    justify-content: space-around;
-    
+.view__btn:hover{
+    box-shadow:grey;
 }
 
 a.view__btn{
@@ -236,31 +223,20 @@ a.view__btn{
     text-decoration:none;
     color:white;
     font-weight:700;
-}
-
-.add__click{
-
-    border: solid var(--darkBlue) 2px;
-    border-radius: 20px;
-    width: 180px;
-    text-align: center;
-    background-color: var(--fushia);
-    height: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    padding:5px;
-    margin:auto;
-}
+    transition: 1.2s ease-in-out cubic-bezier(1,0,0,1);
     
-.add__click a{
-    text-decoration:none;
-    color:white;
-    font-weight:bold;
+}
+
+a.view__btn:hover{
+    background-color:#9DDFD3;
+    color:#31326F;
+    
+    
 }
 
 
-/*---------------------------------------Footer____-----------------------------*/
+
+/*---------------------------------------Footer--------------------------------*/
 
 footer{
     background:lightgrey;
@@ -277,12 +253,17 @@ footer ul{
     justify-content: space-around;
     padding-top: 30px;
     list-style-type: none;
-    font-size: 1.5rem;
-    color: var(--darkBlue);
-    font-weight: 700;
+    
+    
+   
 }
 
-
+footer a{
+    text-decoration: none;
+    color: var(--darkBlue);
+    font-size: 1.5rem;
+    font-weight: 700;
+}
 
 .social{
     
@@ -314,7 +295,8 @@ footer ul{
     width: 100%;
     background-color: var(--lightMint);
     margin:auto;
-    max-width:850px;
+    max-width:750px;
+    border-radius:20px;
 }
    
 .pdt__description{
@@ -332,8 +314,9 @@ footer ul{
     text-align: left;
     padding-left:12px;
 }
-.infos h2{
-    font-size:3rem;
+#ted__info h2{
+    font-size:2.5rem;
+    font-weight:900;
 }
    
 .thumbnail {
@@ -341,15 +324,49 @@ footer ul{
     padding:10px;
 }
    
-
-.pdt__list {
-    display: inline-flex;
-    flex-wrap: wrap;
+#ted__infos{
     width: 100%;
-    align-items: center;
-    justify-content: space-between;
+    display: flex;
+    flex-direction: column;
+    padding:1rem;
+    text-align:center;
+}
+
+#ted__pic {
+    border-radius:20px;
+    border:solid white 5px;
+    max-width: 300px;
+    margin: auto;
+}
+   
+#ted__description{
+    font-size:1.8rem;
+}
+#ted__price{
+    font-size:2rem;
+    font-weight:700;
+}
+
+p.ted__price{
+    font-size:1.8rem;
+    font-weight:700;
+    color:var(--darkBlue);
+}
+.pdt__list {
+    
+   
+    width: 100%;
+    
+    
     list-style: none;
-    margin-bottom:30px;
+   
+}
+.ted__options{
+    display: flex;
+align-items: center;
+padding-left: 4rem;
+padding-right: 4rem;
+
 }
 
 .btn select{
@@ -404,9 +421,7 @@ footer ul{
     cursor: pointer;
 }
 
-.pdt__footer{
-    display:none;
-}
+
  /*------------------panier--------------------------*/
  
  .titre__panier{
@@ -457,10 +472,7 @@ td input{
     margin:auto;
 }
 
-.footer__cart{
-    display:none;
 
-}
 
 
  
