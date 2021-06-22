@@ -12,14 +12,11 @@
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC&family=Noto+Sans+TC:wght@100;300;400;500;700;900&family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap" rel="stylesheet"> 
         <link rel="stylesheet" href="../assets/css/style.css">
-        <script src="/pages/product.js"></script>
     </head>
     <body>
         <header>
             <a href="/index.html">
-                <div class="logo">
-                    Orinours
-                </div>
+                <div class="logo">Orinours</div>
             </a>
             <div class="searchbar">
                 <div class="conteneur__form">
@@ -42,48 +39,49 @@
                             <i class="fas fa-user-circle"></i> 
                         </a> 
                     </li>
-                <li class="cart">
-                    <a href="pages/basket.html">
-                        <div class="cart">
-                            <i class="fas fa-shopping-cart"></i>
-                            <p>Panier</p>
-                        </div>
-                    </a>
-                </li>
+                    <li class="cart">
+                        <a href="pages/cart.html">
+                            <div class="cart">
+                                <i class="fas fa-shopping-cart"></i>
+                                <p>Panier</p>
+                            </div>
+                        </a>
+                    </li>
             </nav>
         </header>
         <main>
             <section id="pdt__container" class="pdt__container">
-               
-                    <ul class="pdt__list">
-                        <li class="color">
-                            <form class="btn btn__select" id="options">
-                                <select name="color__option" id="select">
-                                           
-                                </select>
-                            </form>
-                        </li>
-                        <li class="quantity">
-                            <div class="btn__nb">
-                                <i class="fas fa-minus"></i>
-                                    </div>
-                                    <div class="pdt__number">
-                                        <input type="text" value="1" name="product__nb">
-                                    </div>
-                                    <div class="btn__nb">
-                                        <i class="fas fa-plus"></i>
-                                    </div>
-                                </li>
-                            </ul>
-                    
-                        <a href="pages/basket.html">
-                            <button class=" btn add__btn">
-                             Ajouter au Panier<br>
-                                <i class="fas fa-shopping-cart"></i>
-                            </button>
-                        </a>
-                    </div>
+               <div id = "ted__infos">
+                   <img id= "ted__pic" src="" alt="">
+                   <h2 id="ted__name"></h2>
+                   <p id="ted__description"></p>
+                   <p id="ted__price"></p>
                 </div>
+                <ul class="pdt__list">
+                    <li class="color">
+                        <form class="btn btn__select" id="options">
+                            <select name="color__option" id="select"></select>
+                        </form>
+                    </li>
+                    <li class="quantity">
+                        <div class="btn__nb">
+                            <i class="fas fa-minus"></i>
+                        </div>
+                        <div class="pdt__number">
+                            <input type="text" value="1" name="product__nb">
+                        </div>
+                        <div class="btn__nb">
+                            <i class="fas fa-plus"></i>
+                        </div>
+                    </li>
+                </ul>
+                <a href="pages/cart.html">
+                    <button class=" btn add__btn">
+                        Ajouter au Panier<br>
+                        <i class="fas fa-shopping-cart"></i>
+                    </button>
+                </a>
+            
             </section>
         </main>
         <footer class="pdt__footer">
@@ -99,6 +97,7 @@
             </div>
         </footer>
     </body>
+    <script src="product.js"></script>
 </html>
 
     

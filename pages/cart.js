@@ -1,23 +1,19 @@
-const { json } = require("express");
-const e = require("express");
 
 let cart = [];
 const addToCartBtn = document.getElementByClassName ('add to cart');
 
 //ajout d' articles dans local storage//
 for (let i=o; i<addToCartBtn.length; i++){
-addToCartBtn[i].addEventListener('click', function(e){
+addToCartBtn[i].addEventListener('click', function(){
 let items =[];
 })
 }
 
 if (typeof(storage) !== 'undefined'){
     let item ={
-       //* id:i + 1,
-        name: e.target.Elemnt.child[].textContent
-        price:e.target.Element.children[].children[0].textContent
-        number
-    }//
+       //* id:i + 1, name price et description .textContent//
+        
+    }
     if(json.parse(localStorage.getItem('items')) === null){
         items.push(item);
     localStorage.setItem('items', JSON.stringify(item));

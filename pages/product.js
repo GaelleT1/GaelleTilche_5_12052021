@@ -1,10 +1,12 @@
-let url = new URL(window.location.href);
-let params = new URLSearchParams(window.location.href);
-let id = params.get('id');
+// Recuperation du nouveau lien de la page 'index' avec nouveaux parametres//
 
+let pdtLocation = new URL(window.location.href);
+let params = new URLSearchParams(pdtLocation.search);
+let id = params.get('id');
 const url2 = "http://localhost:3000/api/teddies/" + id;
 
-fetch (url)
+// Recuperation des infos de l'API grace a la nouvelle url//
+fetch (url2)
 .then(function(res) {
   if (res.ok) {
     return res.json();
@@ -17,49 +19,46 @@ fetch (url)
 
 .catch(function(error){});
 
-//fonction de recuperation des Ours//
+// Fonction de visualisation des Ours en fonction de leur id//
 
-function viewTeddies(url) {
-  
-    let Products = document.getElementById("pdt__container");
-    let tedInfos = document.createElement("div"); 
-    tedInfos.setAttribute("class", "ted__infos");
+function viewTeddies(pdtLocation) {
 
-      let tedName = document.createElement("h2");
-      tedName.setAttribute("class", "ted__name"); 
-      tedName.innerText = url.name;
-      tedName.appendChild(tedInfos);
-      tedInfos.appendChild(Products);
+  //Recuperation des Elements dans le DOM//
+    let products = document.getElementById("pdt__container");
+    let tedInfos = document.getElementById("ted__infos"); 
+
+    // Ajout du contenu texte et source a l'interieur  des elements//
+    let tedImg = document.getElementById('ted__pic');
+    tedImg.setAttribute ('src', pdtLocation.imageUrl);
     
-    let tedImg = document.createElement("img");
-      tedImg.setAttribute("class", "ted__pic");
-      tedImg.setAttribute("src", url[imageUrl]);
-      tedInfos.appendChild(tedImg);
-  
-      let tedDescription = document.createElement("p");
-      tedDescription.setAttribute("class", "ted__description"); 
-      tedDescription.innerText = url.description;
-      tedInfos.appendChild(tedDescription);
-  
-      let tedPrice = document.createElement("p");
-      tedPrice.setAttribute("class", "ted__price"); 
-      tedPrice.innerText = url.price;
-      tedInfos.appendChild(tedPrice); 
+    let tedName = document.getElementById('ted__name');
+    tedName.innerText = pdtLocation.name;
       
-     // choix des options//
-for (let i = 0; i < colors.length; i++) {
-    option.value = colors[i];
-    option.text = colors[i];
-    let colors = url.colors;
-    let pdtContainer = document.getElementById('pdt__container');
-    let select = document.createElement('select');
-    let options = document.createElement("option");
-    options.setAttribute = ('selected', 'selected');
-    pdtContainer.appendChild('select');
-    select.appendChild('options');
-   
-}
+    let tedDescription = document.getElementById('ted__description'); 
+    tedDescription.innerText = pdtLocation.description;
+      
+    let tedPrice = document.getElementById('ted__price');
+    tedPrice.innerText = pdtLocation.price;
+
+    // Rattachement de la Div contenant les infos au conteneur principal// 
+    products.appendChild(tedInfos); 
+
+     // Choix des options//
+
+      let select = document.createElement('select');
+      for (let i = 0; i < colors.length; i++) {
+      option.value = colors[i];
+      option.text = colors[i];
+      let colors = pdtLocation.colors;
+      let options = document.createElement("option");
+    //ifoptions.setAttribute = ('selected', 'selected');//
+
+      // Rattachement de la selection  au conteneur principal//
+      products.appendChild('select');
+      select.appendChild('options');
     
+}
+   
 }  
     
     
