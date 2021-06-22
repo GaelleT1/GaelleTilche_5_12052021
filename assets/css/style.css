@@ -352,20 +352,18 @@ p.ted__price{
     font-weight:700;
     color:var(--darkBlue);
 }
+
 .pdt__list {
     
-   
-    width: 100%;
-    
-    
-    list-style: none;
-   
+width: 100%;
+list-style: none;
 }
+
 .ted__options{
     display: flex;
-align-items: center;
-padding-left: 4rem;
-padding-right: 4rem;
+    align-items: center;
+    padding-left: 4rem;
+    padding-right: 4rem;
 
 }
 
