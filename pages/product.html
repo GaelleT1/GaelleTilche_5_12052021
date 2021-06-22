@@ -15,9 +15,11 @@
     </head>
     <body>
         <header>
+            <!--------------------------logo------------------------>
             <a href="/index.html">
                 <div class="logo">Orinours</div>
             </a>
+            <!----------------barre de recherche----------------------->
             <div class="searchbar">
                 <div class="conteneur__form">
                     <form>
@@ -27,11 +29,12 @@
                                      <i class="fas fa-search"></i>
                                 </a>
                             </button>
-                            <search__input id="search" type="text" placeholder="Recherche">
+                            <search id="search" type="text" placeholder="Recherche">
                         </div>
                     </form>
                 </div>
             </div>
+            <!---------------------------icones user et panier-->
             <nav>
                 <ul>
                     <li class="User">
@@ -49,7 +52,7 @@
                     </li>
             </nav>
         </header>
-        <main>
+        <main><!------section principale produit-------------------->
             <section id="pdt__container" class="pdt__container">
                <div id = "ted__infos">
                    <img id= "ted__pic" src="" alt="">
@@ -57,12 +60,14 @@
                    <p id="ted__description"></p>
                    <p id="ted__price"></p>
                 </div>
+                <!--------------menu deroulant couleurs-------->
                 <ul class="pdt__list">
                     <li class="color">
                         <form class="btn btn__select" id="options">
                             <select name="color__option" id="select"></select>
                         </form>
                     </li>
+                    <!-----------------boutons +/- ------------->
                     <li class="quantity">
                         <div class="btn__nb">
                             <i class="fas fa-minus"></i>
@@ -75,13 +80,13 @@
                         </div>
                     </li>
                 </ul>
+                <!-----------------------bouton ajout au panier----------------->
                 <a href="pages/cart.html">
                     <button class=" btn add__btn">
                         Ajouter au Panier<br>
                         <i class="fas fa-shopping-cart"></i>
                     </button>
                 </a>
-            
             </section>
         </main>
         <footer class="pdt__footer">
@@ -97,6 +102,7 @@
             </div>
         </footer>
     </body>
+    <!---------------------script js--------------------------->
     <script src="product.js"></script>
 </html>
 

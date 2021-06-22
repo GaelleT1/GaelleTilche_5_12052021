@@ -144,7 +144,7 @@ h1{
     font-family: pacifico;
     color: var(--darkBlue);
     font-weight: 400;
-    font-size:3rem;
+    font-size:4rem;
 }       
 
 
@@ -166,24 +166,17 @@ h2{
 .cards{
     display:flex;
     flex-wrap:wrap;
-    justify-content:center;
-    list-style-type: none;
-    padding:0;
-    margin:0;
+    justify-content:space-around;
+    
 }
 
-.cards li{
-    flex: 0 1 30;
-    margin:1rem;
-    margin-bottom:0;
-    height:40 rem;
-    border-top: 2px lightgrey solid;
-}
 .card__description{
     display: flex;
     flex-direction: column;
     text-align: center;
+    line-height:1rem;
 }
+
 .card__info{
     display: flex;
     align-items: center;
@@ -195,24 +188,29 @@ h2{
    flex-direction: column;
    justify-content:space-around;
    height:100%;
-
+   border-radius: 20px;
+    border: 2px solid var(--mint);
+    max-width: 280px;
+    padding-bottom: 1rem;
+    margin: 1rem;
 }
 
 .single__card img{
-    max-height:22rem;
     width:100%;
-    margin-top:2rem;
+    border-radius:20px 20px 0 0;
 }
   
 .pdt__info{
     text-align:center;
     margin:auto;
 }
+
 .name{
     font-size:1.5rem;
     font-weight:bold;
     font-family: Garamond;
 }
+
 .price{
     font-weight: bold;
     font-size: 1.5rem;
@@ -270,7 +268,7 @@ footer{
     font-size: 1.2rem;
     font-weight:700;
     flex-direction: column;
-    
+    margin-top:2rem;
 }
 
 

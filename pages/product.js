@@ -5,7 +5,7 @@ let params = new URLSearchParams(pdtLocation.search);
 let id = params.get('id');
 const url2 = "http://localhost:3000/api/teddies/" + id;
 
-// Recuperation des infos de l'API grace a la nouvelle url//
+// Import des data de l'API avec nouvelle url contenant l'id//
 fetch (url2)
 .then(function(res) {
   if (res.ok) {
@@ -27,7 +27,7 @@ function viewTeddies(pdtLocation) {
     let products = document.getElementById("pdt__container");
     let tedInfos = document.getElementById("ted__infos"); 
 
-    // Ajout du contenu texte et source a l'interieur  des elements//
+    // Ajout du contenu texte et source img, a l'interieur des elements//
     let tedImg = document.getElementById('ted__pic');
     tedImg.setAttribute ('src', pdtLocation.imageUrl);
     
@@ -51,7 +51,8 @@ function viewTeddies(pdtLocation) {
       option.text = colors[i];
       let colors = pdtLocation.colors;
       let options = document.createElement("option");
-    //ifoptions.setAttribute = ('selected', 'selected');//
+    //if
+    options.setAttribute = ('selected', 'selected');//
 
       // Rattachement de la selection  au conteneur principal//
       products.appendChild('select');
