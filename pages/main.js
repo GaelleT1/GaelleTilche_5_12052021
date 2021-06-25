@@ -63,7 +63,7 @@ fetch (teddies)
 
     let tedPrice = document.createElement('p');
     tedPrice.className = 'ted__price';
-    tedPrice.innerText = Element.price;
+    tedPrice.innerText = Element.price/100  +  '€';
    
     let viewBtn = document.createElement('a');
     viewBtn.className = 'view__btn';

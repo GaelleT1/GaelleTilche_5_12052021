@@ -19,7 +19,7 @@ fetch (url2)
 
 .catch(function(error){});
 
-//------------- Fonction de visualisation des Ours en fonction de leur id-------------//
+//------------- Fonction de visualisation des Ours en fonction de leur parametres-------------//
 
 function viewTeddies(pdtLocation) {
 
@@ -38,43 +38,53 @@ function viewTeddies(pdtLocation) {
     tedDescription.innerText = pdtLocation.description;
       
     let tedPrice = document.getElementById('ted__price');
-    tedPrice.innerText = pdtLocation.price;
+    tedPrice.innerText = pdtLocation.price/100 + '€';
 
     // Rattachement de la Div contenant les infos au conteneur principal// 
     products.appendChild('ted__infos'); 
 
-     // ------------------------Choix des options couleur/ quantite------------------//
+     // ------------------------Choix des options couleur------------------//
 
-      let select = document.createElement('select');
+      const select = document.getElementById('select');
       for (let i = 0; i < colors.length; i++) {
       option.value = colors[i];
       option.text = colors[i];
-      let colors = pdtLocation.colors;
-      let options = document.createElement("option");
-    //if
-    options.setAttribute = ('selected', 'selected');//
+      let colors = [];
+      let option = document.createElement('option');
+      option.innertext = colors;
+       // if(){
+
+      //  }else{
+
+      //  }
+    //
 
       // Rattachement de la selection  au conteneur principal//
-      products.appendChild('select');
-      select.appendChild('options');
+     
+      select.appendChild(option);
     
 }
 
-   //-------------------------------CART------------------------------------//
+   //------------------------------add to CART------------------------------------//
 
 let cart = [];
 const addToCartBtn = document.getElementByClassName ('add__btn');
 
-//ajout d'articles dans local storage//
+
 for (let i=o; i<addToCartBtn.length; i++){
-addToCartBtn[i].addEventListener('click', function(){
+  //envoyer au panier au clic du btn//
+addToCartBtn[i].addEventListener('click',(event)=>{
+  event.preventDefault();
+});
 let items =[];
-})
 }
+}
+//ajout d'articles dans local storage//
 if (typeof(storage) !== 'undefined'){
     let item ={
-       //* id:i + 1, name price et description .textContent//
+      //* id:i + 1, name price et description .textContent//
     }
+       
     if(json.parse(localStorage.getItem('items')) === null){
         items.push(item);
     localStorage.setItem('items', JSON.stringify(item));
@@ -95,7 +105,7 @@ if (typeof(storage) !== 'undefined'){
     }else{
         alert(' local storage error');
     }
-}
+
     
     
   

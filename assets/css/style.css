@@ -362,9 +362,8 @@ list-style: none;
 .ted__options{
     display: flex;
     align-items: center;
-    padding-left: 4rem;
-    padding-right: 4rem;
-
+    padding-bottom: 2rem;
+    justify-content:space-around;
 }
 
 .btn select{
@@ -422,53 +421,27 @@ list-style: none;
 
  /*------------------panier--------------------------*/
  
- .titre__panier{
-     color:black;    
+ .title__row {
+    display: flex;
+    justify-content: space-around;
+    border-bottom: solid 2px darkgrey;
+}
+
+ .item__row{
+     display:flex;
+     width:100%;
  }
-
-.cart__table{
-    width:100%;
-}
-
-table, th, td{
-
-    border: solid 2px lightgrey;
-    text-align: center;
-    font-size:1rem;
-    padding:10px;
-}
-
- td a{
-     font-size:1rem;
-     color:black;
+ 
+ .cart__column{
+     display:flex;
+     width:150px;
  }
-
- table thead{
-     background-color: var(--lightMint);
-     color:var(--darkBlue);
-     font-weight:700;
-     height:40px;
-     border-collapse: collapse;
-}
 
  .fa-trash{
     color:darkred;
 }
 
-td img{
-    max-width:150px;
-}
 
-td h3{
-    font-size:1rem;
-    
-}
-
-td input{
-    border:solid lightgrey 2px;
-    max-width:70px;
-    margin:auto;
-}
 
 
 
