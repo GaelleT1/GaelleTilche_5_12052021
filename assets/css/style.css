@@ -434,16 +434,30 @@ list-style: none;
  
  .cart__column{
      display:flex;
-     width:150px;
+     width:200px;
  }
 
  .fa-trash{
     color:darkred;
 }
 
+.cart__container{
+    height:200px;
+    width:700px;
+}
 
+.cart__title {
+    width: 700px;
+}
 
+.Shopping__cart {
+    max-width: 900px;
+    margin: auto;
+}
 
+.cart__thumbnail{
+width:100%;
+}
 
 
  

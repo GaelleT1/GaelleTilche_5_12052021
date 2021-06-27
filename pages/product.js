@@ -39,28 +39,22 @@ function viewTeddies(pdtLocation) {
       
     let tedPrice = document.getElementById('ted__price');
     tedPrice.innerText = pdtLocation.price/100 + '€';
-
-    // Rattachement de la Div contenant les infos au conteneur principal// 
-    products.appendChild('ted__infos'); 
+  
+   
+    
 
      // ------------------------Choix des options couleur------------------//
 
       const select = document.getElementById('select');
+      let colors = pdtLocation.colors;
+      console.log(colors);
       for (let i = 0; i < colors.length; i++) {
-      option.value = colors[i];
-      option.text = colors[i];
-      let colors = [];
       let option = document.createElement('option');
-      option.innertext = colors;
-       // if(){
-
-      //  }else{
-
-      //  }
-    //
+        
 
       // Rattachement de la selection  au conteneur principal//
-     
+      option.value = colors[i];
+      option.innerText = colors[i];
       select.appendChild(option);
     
 }
@@ -75,36 +69,39 @@ for (let i=o; i<addToCartBtn.length; i++){
   //envoyer au panier au clic du btn//
 addToCartBtn[i].addEventListener('click',(event)=>{
   event.preventDefault();
+  //ajout d'articles dans local storage//
+if (typeof(storage) !== 'undefined'){
+  let item ={
+    //* id:i + 1, name price et description .textContent//
+  }
+     
+  if(json.parse(localStorage.getItem('items')) === null){
+      items.push(item);
+  localStorage.setItem('items', JSON.stringify(item));
+  }else{
+      const localItems = json.parse(localStorage.getItem('items'))
+      localItems.map(data=>{
+          if(item.id === data.id){
+             item.nb = item.nb +1;
+          
+          }else{
+              items.push(data);
+          }
+      })
+      items.push(item);
+      localStorage.setItem('items',JSON.stringify(items));
+      }
+      alert('article ajouté');
+  }else{
+    console.log('')
+      
+  }
 });
+
 let items =[];
 }
 }
-//ajout d'articles dans local storage//
-if (typeof(storage) !== 'undefined'){
-    let item ={
-      //* id:i + 1, name price et description .textContent//
-    }
-       
-    if(json.parse(localStorage.getItem('items')) === null){
-        items.push(item);
-    localStorage.setItem('items', JSON.stringify(item));
-    }else{
-        const localItems = json.parse(localStorage.getItem('items'))
-        localItems.map(data=>{
-            if(item.id === data.id){
-               item.nb = item.nb +1;
-            
-            }else{
-                items.push(data);
-            }
-        })
-        items.push(item);
-        localStorage.setItem('items',JSON.stringify(items));
-        }
-        alert('article ajouté');
-    }else{
-        alert(' local storage error');
-    }
+
 
     
     
