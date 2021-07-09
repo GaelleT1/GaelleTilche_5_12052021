@@ -40,71 +40,88 @@ function viewTeddies(pdtLocation) {
     let tedPrice = document.getElementById('ted__price');
     tedPrice.innerText = pdtLocation.price/100 + '€';
   
-   
-    
-
-     // ------------------------Choix des options couleur------------------//
+   // ------------------------Choix des options couleur------------------//
 
       const select = document.getElementById('select');
       let colors = pdtLocation.colors;
-      console.log(colors);
       for (let i = 0; i < colors.length; i++) {
       let option = document.createElement('option');
-        
-
-      // Rattachement de la selection  au conteneur principal//
       option.value = colors[i];
       option.innerText = colors[i];
-      select.appendChild(option);
-    
+    // Rattachement de la selection  au conteneur principal//
+     select.appendChild(option);
+      console.log(option.value);
 }
+
 
    //------------------------------add to CART------------------------------------//
-
-let cart = [];
-const addToCartBtn = document.getElementByClassName ('add__btn');
-
-
-for (let i=o; i<addToCartBtn.length; i++){
-  //envoyer au panier au clic du btn//
-addToCartBtn[i].addEventListener('click',(event)=>{
+//creation de l'évenement'envoyer au panier' au clic du btn//
+const addBtn = document.getElementsById('add__btn');
+ addBtn[i].addEventListener('click',(event)=>{
   event.preventDefault();
-  //ajout d'articles dans local storage//
-if (typeof(storage) !== 'undefined'){
-  let item ={
-    //* id:i + 1, name price et description .textContent//
-  }
+//creation du panier
+let cart = document.getelementbyId('cart');
+let items = [];
+//sauver le panier dans local storage
+function save  () {
+  localStorage.setItem("cart", JSON.stringify(cart.items));
+}
+ }, //charger le panier depuis local storage
+ function Load () {
+  cart.items = localStorage.getItem("cart");
+  if (cart.items == null) { cart.items = []; }
+  else { cart.items = JSON.parse(cart.items); }
+},
+ )
+}
+for(let i=0; i<addBtn.length; i++){
+   {
+		if(typeof(Storage) !== 'undefined'){
+				let items = {
+						id:i+1,
+						let name = tedName.innertText;
+						tedPrice.innerText;
+						
+					};//si panier = local storage :push items dans le panier
+				if(JSON.parse(localStorage.getItem('items')) === null){
+					items.push(items);
+					localStorage.setItem("items",JSON.stringify(items));
+					window.location.reload();
+				}else{ 
+					const localItems = JSON.parse(localStorage.getItem("items"));
+					localItems.map(data=>{
+						if(items.id == data.id){
+							items.no = data.no + 1;
+						}else{
+							items.push(data);
+						}
+					});
+					items.push(item);
+					localStorage.setItem('items',JSON.stringify(items));
+					window.location.reload();
+				}
+			}else{
+				console.log(error);
+			}
+		});
+	}
+	//ajouter les donnee au panier
+	const iconShoppingP = document.querySelector('.iconShopping p');
+	let nb = 0;
+	JSON.parse(localStorage.getItem('items')).map(data=>{
+		nb = nb+data.nb
+;	});
+//creation du tableau
+	const cartItems = cartBox.querySelector('table');
+	let datatable = '';
+	dataTable += document.createElement('tr')
+  document.createElement('tr');
+	if(JSON.parse(localStorage.getItem('items'))[0] === null){
+    dataTable += 
+	}else{
+		JSON.parse(localStorage.getItem('items')).map(data=>{
      
-  if(json.parse(localStorage.getItem('items')) === null){
-      items.push(item);
-  localStorage.setItem('items', JSON.stringify(item));
-  }else{
-      const localItems = json.parse(localStorage.getItem('items'))
-      localItems.map(data=>{
-          if(item.id === data.id){
-             item.nb = item.nb +1;
-          
-          }else{
-              items.push(data);
-          }
-      })
-      items.push(item);
-      localStorage.setItem('items',JSON.stringify(items));
-      }
-      alert('article ajouté');
-  }else{
-    console.log('')
-      
-  }
-});
-
-let items =[];
+		});
+	}
+	
 }
-}
-
-
-    
-    
-  
-
-  

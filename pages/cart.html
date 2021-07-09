@@ -43,89 +43,26 @@
                 </li>
             <li class="cart">
                 <a href="pages/cart.html">
-                    <div class="cart">
-                        <i class="fas fa-shopping-cart"></i>
-                        <p>Panier</p>
+                    <div class="cart-icon">
+                        <i id="cart-icon" class="fas fa-shopping-cart"></i>
+                        <p>0</p>
                     </div>
                 </a>
             </li>
         </nav>
     </header>
+
+
         <main>
-            <section class="Shopping__cart">
-                <div class="cart__container id=cart-container">
-                    <div class="cart__title">
-                        <div class="title__row">
-                            <div class="pdt__title cart__column">  
-                                <p>Produit</p>
-                            </div>
-                            <div class="price__title cart__column">
-                                <p>prix</p>
-                            </div>
-                            <div class="quantity__title cart__column"> 
-                                <p>Quantité</p>
-                            </div>
-                            <div class="total__title cart__column">
-                                <p>Total</p>
-                            </div>
-                        </div>
-                    </div>  
-                    <div class= "cart__items">
-                        <div class="item__row">
-                            <div class="item__thumb cart__column">
-                                    <a href="#">
-                                        <img class="cart__thumbnail" src="/assets/images/teddy_2.jpg" alt="image ourson Arnold">
-                                    </a>
-                                    <h3 class="item__name">ARNOLD</h3>
-                            </div>        
-                            <div class="item__price cart__column">
-                                    <p class="item-price">45€</p>  
-                            </div>   
-                            <div class="item__quantity cart__column">
-                                    <form action="">
-                                        <input type="number" value="1" name="quantity">
-                                    </form>
-                                    <button class="delete__btn"><i class="fas fa-trash"></i></button>
-                            </div>   
-                            </div class="cart__subtotal cart__column">
-                                45€
-                            </div>
-                        
-                        </div>
-                    </div>
-                    <div class= "cart__items">
-                        <div class="item__row">
-                            <div class="item__thumb cart__column">
-                                        <a href="#">
-                                            <img class="cart__thumbnail" src="/assets/images/teddy_2.jpg" alt="image ourson Arnold">
-                                        </a>
-                                        <h3 class="item__name">ARNOLD</h3>
-                            </div>        
-                            <div class="item__price cart__column">
-                                        <p class="item-price">45€</p>  
-                            </div>   
-                            <div class="item__quantity cart__column">
-                                        <form action="">
-                                            <input type="number" value="1" name="quantity">
-                                        </form>
-                                        <button class="delete__btn">
-                                            <i class="fas fa-trash"></i>
-                                        </button>
-                            </div>   
-                            </div class="cart__subtotal cart__column">
-                                        45€
-                            </div>
-                        </div>          
-                    </div>
-                    <div class="cart__total" >
-                        <p>TOTAL</p>
-                        <span class="total__price">$$$$</span>
-                    </div>   
-                    <button>Passer la Commande</button>
-                </div>
-            </div>
-            </section>
+            <section id ="cart-container" class="cart__container">
+                <div class= "cart" id="cart">
+                    <i id= "close-icon" class="fa fa-close"></i>
+                    <h1>Panier</h1>
+                </div> 
+            </section> 
         </main>
+
+
         <footer class="footer__cart">
             <ul>
                 <a href="#"><li>A propos</li></a>

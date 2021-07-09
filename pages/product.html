@@ -14,8 +14,8 @@
         <link rel="stylesheet" href="../assets/css/style.css">
     </head>
     <body>
+<!----------------------------------HEADER--------------------------------------------------->
         <header>
-            <!--------------------------logo------------------------>
             <a href="/index.html">
                 <div class="logo">Orinours</div>
             </a>
@@ -44,37 +44,33 @@
                     </li>
                     <li class="cart">
                         <a href="pages/cart.html">
-                            <div class="cart">
-                                <i class="fas fa-shopping-cart"></i>
-                                <p>Panier</p>
+                            <div class="cart-icon">
+                                <i id="cart-icon" class="fas fa-shopping-cart"></i>
+                                <p>0</p>
                             </div>
                         </a>
                     </li>
             </nav>
         </header>
-        <main><!------section principale produit-------------------->
+<!-------------------------------------MAIN produit---------------------------------------------->
+        <main>
             <section id="pdt__container" class="pdt__container">
                <div id = "ted__infos" class="ted__infos">
                    <img id= "ted__pic" src="" alt="">
                    <h2 id="ted__name"></h2>
                    <p id="ted__description"></p>
                    <p id="ted__price"></p>
-                </div>
-                <div class="ted__options">
-                <!--------------menu deroulant couleurs-------->
-                     <form class="btn btn__select" id="options">
-        
-                            <select name="color__option" id="select"></select>
+                   <!---menu options couleurs-->
+                    <form class="btn btn__select" id="ted__options">
+                        <select name="color__option" id="select"></select>
                     </form>
-                    
-                <!-----------------------bouton ajout au panier----------------->
+                </div>
+         <!-----------------------Add to cart btn----------------->
+                <button id = "add__btn" class=" btn add__btn">
+                    <p>Ajouter au Panier</p>
+                    <i class="fas fa-shopping-cart"></i>
+                </button>
                 
-                    <button class=" btn add__btn">
-                        Ajouter au Panier<br>
-                        <i class="fas fa-shopping-cart"></i>
-                    </button>
-                
-            </div>
             </section>
         </main>
         <footer>
