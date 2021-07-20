@@ -19,7 +19,7 @@ fetch (url2)
 
 .catch(function(error){});
 
-//------------- Fonction de visualisation des Ours en fonction de leur parametres-------------//
+//------------- Fonction pour afficher l'ours selectionné-------------//
 
 function viewTeddies(pdtLocation) {
 
@@ -40,7 +40,7 @@ function viewTeddies(pdtLocation) {
     let tedPrice = document.getElementById('ted__price');
     tedPrice.innerText = pdtLocation.price/100 + '€';
   
-   // ------------------------Choix  deroulant des options couleur------------------//
+   // ------------------------menu deroulant  choix des options de couleur------------------//
 
       const select = document.getElementById('select');
       let colors = pdtLocation.colors;
