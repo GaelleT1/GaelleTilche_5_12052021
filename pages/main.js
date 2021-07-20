@@ -41,6 +41,7 @@ fetch (teddies)
     cardsContainer.className = "cards__container";
     
     let singleCard = document.createElement('a');
+
     //new url  pour recuperer les ours depuis l'id (cartes avec liens actifs) //
     singleCard.setAttribute('href', 'pages/product.html?id=' + Element._id );
     singleCard.className = 'single__card';
@@ -68,7 +69,7 @@ fetch (teddies)
     let viewBtn = document.createElement('a');
     viewBtn.className = 'view__btn';
     viewBtn.innerText = 'Voir';
-    //lien du bouton vers la page 'product'//
+    //lien au click du bouton "voir" vers la page 'product'//
     viewBtn.setAttribute('href', 'pages/product.html?id=' + Element._id );
 
     
