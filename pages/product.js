@@ -48,13 +48,44 @@ function viewTeddies(pdtLocation) {
       let option = document.createElement('option');
       option.value = colors[i];
       option.innerText = colors[i];
-    // Rattachement de la selection  au conteneur principal//
-     select.appendChild(option);
+      select.appendChild(option);
       console.log(option.value);
 }
 }
 
 
+/*
+function addItems(){
+  let items = [];
+  if(localStorage.getItem('items')){
+      items = JSON.parse(localStorage.getItem('items'));
+  }
+  items.push({ items, tedImg(src)});
+  localStorage.setItem('items', JSON.stringify(items));
+}
+*/
+/*supprimer les items
+
+function removeItems(products){
+
+  let saveItems = JSON.parse(localStorage.getItem('items'));
+  let items = saveItems.filter(productLocation => products.productsId !== productId );
+  localStorage.setItem('itemss', JSON.stringify(products));
+}
+*/
+
+//creation evenement ajouter au panier a partir du bouton//
+
+let addToCartBtn = getElementById("add__btn");
+addToCartBtn.addEventListener('click', function addToCart(event){
+  let btn = event.target
+  let btnParent = btn.parentElement
+  let itemName = btnParent.children[1].innerText
+  let itemImg = btnParent.children [0].src
+  let itemPrice = btnParent.children [3].innerText
+  
+})
+
 
  
-  
+
